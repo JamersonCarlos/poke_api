@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+*{ 
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Righteous', cursive;
+}
+
+h1 { 
+    font-size: 50px;
+    padding: 20px;
+}
+
+.grid_pokemons { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    width: 900px;
+    margin: auto;
+}
+
+.card_pokemon { 
+    background-color: bisque;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.card_pokemon > p { 
+    text-transform: capitalize;
+}
