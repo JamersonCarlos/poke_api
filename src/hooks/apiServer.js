@@ -25,7 +25,5 @@ export const useFetch = (url) => {
 
     }, [url]);
 
-    console.log(images)
-
     return {data, loading, images}
 }
