@@ -1,0 +1,22 @@
+.stats { 
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barStat { 
+    height: 5px;
+    background-color: red;
+    border-radius: 5px;
+}
+
+.bar { 
+  background-color: darkgray;
+  width: 100px;
+  border-radius: 5px;  
+}
+
+.area_statistic {
+    margin: 5px 10px;
+}
