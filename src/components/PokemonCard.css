@@ -1,0 +1,30 @@
+
+.card_pokemon { 
+    background-color: bisque;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.card_pokemon > p { 
+    text-transform: capitalize;
+}
+
+a { 
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.textButton { 
+    background-color: #ebc117;
+    width: 150px;
+    margin: auto;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+}
