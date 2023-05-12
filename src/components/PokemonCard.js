@@ -6,9 +6,7 @@ import PokeStats from './PokeStats';
 function PokemonCard({pokemon}) {
     const [pokemonId, setPokemonId] = useState();
     const [urlImage, setImg] = useState();
-    const [hp, setHp] = useState();
-    const [attack, setAttack] = useState();
-    const [defense, setDefense] = useState();
+    const [statistics, setStatistics] = useState();
     
     useEffect(() => { 
         async function getInfoPokemon() { 
@@ -16,9 +14,7 @@ function PokemonCard({pokemon}) {
             const responseJson = await response.json();
             setPokemonId(responseJson.id);
             setImg(responseJson.sprites.front_default);
-            setHp(responseJson.stats[0].base_stat);
-            setAttack(responseJson.stats[1].base_stat);
-            setDefense(responseJson.stats[2].base_stat);
+            setStatistics(responseJson.stats);
         }
 
         getInfoPokemon();
@@ -28,7 +24,7 @@ function PokemonCard({pokemon}) {
     
     <div className='card_pokemon' style={{backgroundColor: 'white'}}>
         <img style={{width: 120}} src={urlImage} alt=""/>
-        <PokeStats hp={hp} attack={attack} defense={defense}/>
+        <PokeStats statistics={statistics} typeListStats={true}/>
         <Link to={`pokemons/${pokemonId}`}>
             <div className='textButton'>
                 Mais Informações
